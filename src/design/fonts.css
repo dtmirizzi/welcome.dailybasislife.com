@@ -1,0 +1,35 @@
+@font-face {
+    font-family: 'Erode';
+    src: url(/fonts/Erode-Light.otf) format('opentype');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Erode';
+    src: url(/fonts/Erode-Regular.otf) format('opentype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Erode';
+    src: url(/fonts/Erode-Medium.otf) format('opentype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Erode';
+    src: url(/fonts/Erode-Semibold.otf) format('opentype');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Erode';
+    src: url(/fonts/Erode-Bold.otf) format('opentype');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
