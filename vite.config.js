@@ -3,7 +3,7 @@ import react from '@vitejs/plugin-react'
 
 export default defineConfig(({ mode }) => ({
   plugins: [react()],
-  base: '/welcome.dailybasislife.com/',
+  base: '/',
   server: {
     port: 3000,
     host: true
