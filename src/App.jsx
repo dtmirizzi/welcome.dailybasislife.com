@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route, Navigate, useLocation } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, Navigate, useLocation, useNavigate } from 'react-router-dom';
 import { CycleProvider } from './context/CycleContext';
 import { globalStyles } from './design/globalStyles';
 import { Navbar, AnnouncementBanner } from './design/components';
@@ -8,17 +8,18 @@ import { SettingsView } from './views/SettingsView';
 
 function AppContent() {
   const location = useLocation();
+  const navigate = useNavigate();
   
   const getActiveTab = () => {
     const path = location.pathname;
-    if (path === '/today' || path === '/') return 'Today';
-    if (path === '/calendar') return 'Calendar';
-    if (path === '/settings') return 'Settings';
+    if (path.endsWith('/today') || path === '/' || path === import.meta.env.BASE_URL) return 'Today';
+    if (path.endsWith('/calendar')) return 'Calendar';
+    if (path.endsWith('/settings')) return 'Settings';
     return 'Today';
   };
 
   const handleNavigate = (tab) => {
-    window.location.href = `/${tab}`;
+    navigate(`/${tab}`);
   };
 
   return (
@@ -41,7 +42,7 @@ function AppContent() {
 
 export default function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={import.meta.env.BASE_URL}>
       <CycleProvider>
         <AppContent />
       </CycleProvider>
